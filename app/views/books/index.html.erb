@@ -1,9 +1,9 @@
 <div class="user-info">
     <h2>User info</h2>
-    <%= image_tag @user.get_profile_image(100,100) %>
+    <%= image_tag @user.get_profile_image(100, 100) %>
     <p>name <%= @user.name %></p>
     <p>introduction <%= @user.introduction %></p>
-    <%= link_to edit_user_path do %>
+    <%= link_to edit_user_path(@user) do %>
         <button><i class="fa-solid fa-user-gear"></i></button>
     <% end %>
 </div>

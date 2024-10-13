@@ -23,6 +23,12 @@
 <div class="books">
     <h2>Books</h2>
     <% @books.each do |book| %>
-        <%= image_tag book.get_book_image(80, 80) %>
+        <%= link_to user_path(book.user_id) do %>
+            <%= image_tag book.get_book_image(80, 80) %>
+        <% end %>
+        <%= link_to book_path(book) do %>
+            <%= book.title %>
+        <% end %>
+        <%= book.body %>
     <% end %>
 </div>
